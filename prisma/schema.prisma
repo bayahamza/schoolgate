@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Starter models — replace with your own
+
+model ContactRequest {
+  id        Int      @id @default(autoincrement())
+  name      String
+  message   String
+  phone     String?
+  reason    String?
+  createdAt DateTime @default(now())
+}
+
+model SchoolRegistration {
+  id            Int      @id @default(autoincrement())
+  schoolName    String
+  city          String
+  contactName   String
+  phone         String
+  email         String?
+  planInterest  String   // "free" | "premium" | "premium_plus" | "unknown"
+  createdAt     DateTime @default(now())
+}
+
+model School {
+  id        Int       @id @default(autoincrement())
+  name      String
+  city      String
+  region    String
+  createdAt DateTime  @default(now())
+  listings  Listing[]
+}
+
+model Listing {
+  id         Int      @id @default(autoincrement())
+  schoolId   Int
+  school     School   @relation(fields: [schoolId], references: [id])
+  plan       String   @default("free")
+  monthlyFee Float?
+  createdAt  DateTime @default(now())
+}

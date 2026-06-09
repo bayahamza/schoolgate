@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== BASE ===== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-stone-50 text-gray-800 font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-blue-900;
+  }
+}
+
+/* ===== COMPONENTS ===== */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-amber-500 hover:bg-amber-600 active:bg-amber-600
+           text-white font-semibold
+           px-6 py-3 rounded-xl
+           transition-all duration-200
+           shadow-md hover:shadow-lg
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-white hover:bg-blue-50 active:bg-blue-50
+           text-blue-800 font-semibold border-2 border-blue-800
+           px-6 py-3 rounded-xl
+           transition-all duration-200
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2
+           bg-transparent hover:bg-white/10
+           text-white font-semibold border-2 border-white
+           px-6 py-3 rounded-xl
+           transition-all duration-200;
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl font-display font-bold text-blue-900 leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-600 mt-4 leading-relaxed;
+  }
+
+  .badge-coming-soon {
+    @apply inline-flex items-center gap-1.5
+           bg-amber-50 text-amber-700 border border-amber-200
+           text-sm font-medium px-3 py-1 rounded-full;
+  }
+
+  .badge-free {
+    @apply inline-flex items-center gap-1.5
+           bg-green-50 text-green-700 border border-green-200
+           text-sm font-medium px-3 py-1 rounded-full;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200 p-6;
+  }
+
+  .legal-prose {
+    @apply prose prose-slate max-w-none;
+  }
+
+  .legal-prose h2 {
+    @apply text-xl font-display font-bold text-blue-900 mt-8 mb-3;
+  }
+
+  .legal-prose h3 {
+    @apply text-lg font-semibold text-blue-800 mt-6 mb-2;
+  }
+
+  .legal-prose p {
+    @apply text-gray-700 leading-relaxed mb-4;
+  }
+
+  .legal-prose ul {
+    @apply list-disc pl-6 text-gray-700 space-y-1 mb-4;
+  }
+}
+
+/* ===== UTILITIES ===== */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
