@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${playfair.variable} ${dmSans.variable}`}>
+    <html lang="fr" className={`${playfair.variable} ${dmSans.variable}`} style={{ colorScheme: "light" }}>
       <body className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-1">{children}</main>

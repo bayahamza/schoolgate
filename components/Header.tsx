@@ -28,7 +28,7 @@ export default function Header() {
       }`}
     >
       <div className="section-container">
-        <nav className="flex items-center justify-between h-36" aria-label="Navigation principale">
+        <nav className="flex items-center justify-between h-16 md:h-28" aria-label="Navigation principale">
 
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0 group">
@@ -38,7 +38,7 @@ export default function Header() {
               width={420}
               height={138}
               priority
-              className="h-32 w-auto group-hover:opacity-90 transition-opacity"
+              className="h-10 md:h-24 w-auto group-hover:opacity-90 transition-opacity"
             />
           </Link>
 

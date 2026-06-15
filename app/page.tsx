@@ -36,7 +36,7 @@ function HeroSection() {
         </svg>
       </div>
 
-      <div className="section-container relative py-20 sm:py-28 lg:py-36">
+      <div className="section-container relative py-12 sm:py-24 lg:py-36">
         <div className="max-w-3xl">
           {/* Logo hero */}
           <div className="mb-6">
@@ -46,7 +46,7 @@ function HeroSection() {
               width={540}
               height={177}
               priority
-              className="h-44 w-auto brightness-0 invert"
+              className="h-20 sm:h-32 lg:h-44 w-auto brightness-0 invert"
             />
           </div>
 
@@ -58,7 +58,7 @@ function HeroSection() {
             l'établissement idéal — filières, tarifs, transport, frais d'inscription, cantine, et bien plus.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <Link href="/parents" className="btn-primary">
               Découvrir pour les parents
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -251,8 +251,8 @@ function HowItWorksSection() {
 
         {/* Schools preview */}
         <div className="bg-blue-900 rounded-2xl p-6 sm:p-8 text-white">
-          <div className="flex items-start gap-4 flex-wrap">
-            <div className="flex-1 min-w-64">
+          <div className="flex flex-col sm:flex-row items-start gap-4">
+            <div className="flex-1 min-w-0">
               <span className="badge-coming-soon mb-3 inline-flex">Pour les écoles</span>
               <h3 className="font-display font-semibold text-xl mb-2">
                 Un espace dédié à chaque établissement
@@ -283,7 +283,7 @@ function CtaSection() {
           SchoolGate sera bientôt disponible. Restez informé du lancement
           en nous contactant dès maintenant.
         </p>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-center gap-3">
           <Link href="/contact" className="bg-white text-amber-600 font-semibold px-8 py-3 rounded-xl hover:bg-amber-50 transition-colors shadow-md">
             Nous contacter
           </Link>
