@@ -184,16 +184,16 @@ function SolutionSection() {
           </div>
 
           {/* Illustration placeholder */}
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 flex items-center justify-center min-h-64 lg:min-h-96">
+          <div className="bg-gradient-to-br from-blue-900 to-blue-950 rounded-3xl p-8 flex items-center justify-center min-h-64 lg:min-h-96">
             <div className="text-center space-y-4">
               <Image
                 src="/logo.png"
                 alt="SchoolGate"
                 width={220}
                 height={72}
-                className="mx-auto opacity-80"
+                className="mx-auto brightness-0 invert opacity-90"
               />
-              <p className="text-blue-500 text-sm">Interface disponible au lancement</p>
+              <p className="text-blue-300 text-sm">Interface disponible au lancement</p>
             </div>
           </div>
         </div>
